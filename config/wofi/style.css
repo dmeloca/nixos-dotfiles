@@ -1,0 +1,104 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    background: transparent;
+}
+
+window {
+    all: unset;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(26, 27, 38, 0.95); /* Tokyo Night background */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#inner-box {
+    margin: 2px;
+    padding: 5px;
+    border: none;
+}
+
+#outer-box {
+    border: none;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#input {
+    all: unset;
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: #7aa2f7; /* light blue */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    background-color: rgba(40, 42, 59, 0.85); /* darker input bg */
+}
+
+#input image {
+    border: none;
+    color: #7aa2f7;
+}
+
+#input * {
+    border: none;
+    outline: none;
+}
+
+#input:focus {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7dcfff;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #bb9af7; /* lavender */
+    outline: none;
+}
+
+#entry {
+    border: none;
+    margin: 5px;
+}
+
+#entry arrow {
+    border: none;
+    color: #7aa2f7;
+}
+
+#entry:selected {
+    box-shadow: 0 0 8px rgba(125, 207, 255, 0.4);
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(52, 54, 73, 0.9); /* selected bg */
+}
+
+#entry:selected #text {
+    color: #7dcfff; /* brighter cyan */
+}
+
+/*
+Adapted to Tokyo Night theme
+Modified on 2/11/2025 by ChatGPT
+Colors inspired by night sky, neon signage, and subtle self-loathing
+*/
+

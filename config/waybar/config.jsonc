@@ -1,0 +1,114 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4, 
+
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/sep",
+    ],
+    "modules-center": [
+	"hyprland/window"
+    ],
+
+    "modules-right": [
+	"pulseaudio",
+	"custom/sep",
+	"hyprland/language",
+        "custom/sep",
+	"battery",
+	"custom/sep",
+        "network",
+        //"cpu",
+        //"memory",
+        //"disk",
+        "custom/sep",
+        "clock"
+        //"custom/sep",
+        //"tray"
+    ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+	"active-only": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*" : 9
+        }
+    },
+    "hyprland/window" : {
+        "max-length": 40,
+        "seperate-outputs": false
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "Mem: {used}GiB"
+    },
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "Disk: {free}"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "Bat: {capacity}% {icon} {time}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "Bat {capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "Online",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "custom/sep": {
+        "format" : "|",
+        "interval" : 0
+    },
+    "hyprland/language": {
+	"format": "{}",
+	"format-en": "US",
+	"format-es": "CO"
+    },
+    "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "MUTED {icon}",
+    "tooltip-format": "Volumen: {volume}%",
+    "max-length": 5,
+    "exec": "pamixer --get-volume",
+    "interval": 2,
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "format-icons": {
+        "muted": "🔇",
+        "low": "🔈",
+        "medium": "🔉",
+        "high": "🔊"
+    }
+}
+}
