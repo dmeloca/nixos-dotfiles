@@ -92,23 +92,17 @@
     "hyprland/language": {
 	"format": "{}",
 	"format-en": "US",
-	"format-es": "CO"
+	"format-es": "CO",
     },
     "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-muted": "MUTED {icon}",
-    "tooltip-format": "Volumen: {volume}%",
-    "max-length": 5,
-    "exec": "pamixer --get-volume",
-    "interval": 2,
-    "on-click": "pavucontrol",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "format-icons": {
-        "muted": "🔇",
-        "low": "🔈",
-        "medium": "🔉",
-        "high": "🔊"
+    	"format": "{volume}% {icon}",
+    	"format-muted": "MUTED {icon}",
+    	"tooltip-format": "Volumen: {volume}%",
+    	"max-length": 5,
+    	"exec": "pamixer --get-volume",
+    	"interval": 2,
+    	"on-click": "pavucontrol",
+    	"on-scroll-up": "pamixer -i 5",
+    	"on-scroll-down": "pamixer -d 5",
     }
-}
 }

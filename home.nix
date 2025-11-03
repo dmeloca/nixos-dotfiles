@@ -33,7 +33,7 @@ in
 	xdg.configFile = builtins.mapAttrs (name: subpath: {
         	source = create_symlink "${dotfiles}/${subpath}";
         	recursive = true;
-    	}) configs;	
+	}) configs;	
 	home.packages = with pkgs; [
 		neovim
 		wofi
@@ -42,8 +42,8 @@ in
 		openjdk21
 		p7zip
 		wl-clipboard
-  		grim
-  		slurp
+		grim
+		slurp
 		tmux
 		neofetch
 		hyprpaper
