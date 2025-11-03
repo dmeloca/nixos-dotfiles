@@ -16,7 +16,12 @@ in
 	home.username = "ch1p";
 	home.homeDirectory = "/home/ch1p";
 	home.stateVersion = "25.05";
-	programs.git.enable = true;
+	programs.git = {
+    		enable = true;
+    		userName  = "ch1p";
+    		userEmail = "melocarrillodaniel@gmail.com";
+	};
+
 	programs.bash = {
 		enable = true;
 		shellAliases = {
